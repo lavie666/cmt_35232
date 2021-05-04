@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :clients, only: :index
+  root to: 'clients#index'
+  resources :clients, only: [:index, :new, :create]
 end
