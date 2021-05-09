@@ -11,7 +11,7 @@ class CreateClients < ActiveRecord::Migration[6.0]
       t.string     :food
       t.string     :cigarettes
       t.text       :memo
-      # t.references :user,           foreign_key: true
+      t.references :user,    foreign_key: true
       t.timestamps
     end
   end

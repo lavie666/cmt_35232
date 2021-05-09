@@ -1,0 +1,16 @@
+<%= form_with(url: search_clients_path, local: true, method: :get, class: "search-form") do |f| %>
+  <%= f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= f.submit "検索", class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @clients.each do |client| %>
+    <div class="content_post">
+      <%= image_tag client.image.variant(resize: '1000x1000'), class: 'client-image' if client.image.attached? %> 
+      <span class="name">
+        <a href="/clients/<%= client.id %>">
+          <%= client.name %>
+        </a>
+      </span>
+    </div>
+  <% end %>
+</div>

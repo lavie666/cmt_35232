@@ -1,11 +1,1 @@
-<div class="contents row">
-  <% @clients.each do |client| %>
-    <div class="content_post">
-      <%= image_tag client.image.variant(resize: '1000x1000'), class: 'client-image' if client.image.attached? %>
-      <%# <p><%= client.text %></p> %>
-      <span class="name">
-        <%= client.name %>
-      </span>
-    </div>
-  <% end %>
-</div>
+<%= render partial: "search", locals: { f: @clients } %>

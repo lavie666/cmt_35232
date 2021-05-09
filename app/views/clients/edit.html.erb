@@ -1,9 +1,10 @@
 <div class="contents row">
   <div class="container">
-    <h3>顧客追加</h3>
+    <h3>顧客編集</h3>
     <%= form_with(model: @client, local: true) do |f| %>
       <%= render partial: "client", locals: { f: f } %>
-      <%= f.submit "追加" %>
+      <%= link_to "カレンダー", client_calendars_path(@client.id), method: :get, class: "item-red-btn" %>
+      <%= f.submit "編集する" %>
     <% end %>
   </div>
 </div>

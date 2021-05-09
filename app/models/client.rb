@@ -10,8 +10,15 @@ class Client < ApplicationRecord
     validates :name_hiragana, format: { with: /\A[ぁ-んー－]+\z/ }
   end
 
-  with_options numericality: { other_than: 1 } do
-    validates :prefecture_id
-    validates :from_id
-  end 
+  belongs_to :user
+  has_many :calendars, dependent: :destroy
+
+  def self.search(search)
+    if search != ""
+      Client.where('name LIKE(?)', "%#{search}%")
+    else
+      Client.all
+    end
+  end
+
 end
