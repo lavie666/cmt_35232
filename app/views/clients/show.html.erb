@@ -1,0 +1,66 @@
+<div class="item-show">
+  <div class="item-box">
+  <% if user_signed_in? && current_user.id == @client.user_id %>
+    <div class="item-img-content">
+      <%= image_tag @client.image ,class:"item-box-img" if @client.image.attached? %>
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">名前</th>
+          <td class="detail-value"><%= @client.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">よみ</th>
+          <td class="detail-value"><%= @client.name_hiragana %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">誕生日</th>
+          <td class="detail-value"><%= @client.birthday %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">住んでいるところ</th>
+          <td class="detail-value"><%= @client.prefecture.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">出身地</th>
+          <td class="detail-value"><%= @client.from.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">会社名</th>
+          <td class="detail-value"><%= @client.corporation %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">好きなお酒</th>
+          <td class="detail-value"><%= @client.drink %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">好きな食べ物</th>
+          <td class="detail-value"><%= @client.food %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">タバコ</th>
+          <td class="detail-value"><%= @client.cigarettes %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メモ</th>
+          <td class="detail-value"><%= @client.memo %></td>
+        </tr>
+        <div class='calendar'>
+      <% @calendar.each do |c| %>
+        <tr>
+          <th class="detail-item"><%= c.date %></th>
+          <td class="detail-value"><%= c.plan %><%= link_to "削除", client_calendar_path(c.id), method: :delete, data: { confirm: '削除しますか？' }, class:"item-destroy" %></td>
+          
+        </tr>
+      <% end %>
+  </div>
+      </tbody>
+    </table>
+    <%= link_to "編集", edit_client_path(@client.id), method: :get, class: "item-red-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", client_path(@client.id), method: :delete, data: { confirm: '削除しますか？' }, class:"item-destroy" %>
+    <% end %>
+  </div>
+</div> 

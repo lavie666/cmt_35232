@@ -1,0 +1,13 @@
+<div class="contents row">
+  <p><%= @name %>の顧客一覧</p>
+  <% @clients.each do |client| %>
+    <div class="content_post">
+      <%= image_tag client.image.variant(resize: '1000x1000'), class: 'client-image' if client.image.attached? %> 
+      <span class="name">
+        <a href="/clients/<%= client.user.id %>">
+          <%= client.name %>
+        </a>
+      </span>
+    </div>
+  <% end %>
+</div>
