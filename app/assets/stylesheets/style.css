@@ -748,7 +748,7 @@ header.header {
   left: 0;
   right: 0;
   z-index: 5;
-  height: 65px;
+  height: 60px;
   background-image: url("きらきら.jpeg");
   background-size: cover;
   background-attachment: fixed;
