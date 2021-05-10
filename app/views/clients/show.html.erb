@@ -51,16 +51,16 @@
       <% @calendar.each do |c| %>
         <tr>
           <th class="detail-item"><%= c.date %></th>
-          <td class="detail-value"><%= c.plan %><%= link_to "削除", client_calendar_path(c.id), method: :delete, data: { confirm: '削除しますか？' }, class:"item-destroy" %></td>
-          
+          <td class="detail-value"><%= c.plan %><%= link_to "削除", client_calendar_path(c.id), method: :delete, data: { confirm: '削除しますか？' }, class:"calendar-destroy" %></td>
         </tr>
       <% end %>
   </div>
       </tbody>
     </table>
-    <%= link_to "編集", edit_client_path(@client.id), method: :get, class: "item-red-btn" %>
+    <%= link_to "予定追加ページへ", client_calendars_path(@client.id), method: :get, class: "calendar-btn" %>
+    <%= link_to "顧客情報編集", edit_client_path(@client.id), method: :get, class: "item-red-btn" %>
         <p class="or-text">or</p>
-        <%= link_to "削除", client_path(@client.id), method: :delete, data: { confirm: '削除しますか？' }, class:"item-destroy" %>
+        <%= link_to "顧客削除", client_path(@client.id), method: :delete, data: { confirm: '削除しますか？' }, class:"item-destroy" %>
     <% end %>
   </div>
 </div> 

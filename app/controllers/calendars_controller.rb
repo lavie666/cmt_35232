@@ -1,5 +1,6 @@
 class CalendarsController < ApplicationController
-  before_action :move_to_index, except: [:edit, :new, :update]
+  before_action :move_to_index, except: [:edit, :new, :update, :destroy ]
+  
 
   def index
     @calendar = Calendar.new
@@ -18,9 +19,13 @@ class CalendarsController < ApplicationController
   end
 
   def destroy
+    @client = Client.find(params[:id])
     @calendar = Calendar.find(params[:client_id])
-    if @calendar.destroy
+    if current_user.id == @client.user.id
+      @calendar.destroy
       redirect_to "/clients/#{@calendar.client.id}"
+    else
+      redirect_to root_path
     end
   end
 
@@ -37,5 +42,6 @@ class CalendarsController < ApplicationController
       redirect_to root_path
     end
   end
+
   
 end

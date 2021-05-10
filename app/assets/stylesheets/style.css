@@ -510,7 +510,7 @@ ul li {
 }
 
 .row .grid-6 {
-  width: 48.2%;
+  width: 45%;
 }
 
 .row .grid-7 {
@@ -638,7 +638,11 @@ ul li {
 body,
 html {
   height: 100%;
-  background-color: #f5f5f3;
+  background-color:white;
+  background-image: url("きらきら.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 body {
@@ -655,18 +659,18 @@ body {
   line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: #666;
+ 
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #666;
+  color: rgb(10, 9, 10);
 }
 
 a:hover {
-  color: #57C3E9;
+  color: #f153bd;
 }
 
 .bold {
@@ -707,8 +711,8 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #050505;
+  color: #0d0f0f;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -717,8 +721,8 @@ header.header div.header__bar.row div.grid-6 a.post {
 
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
-  border-color: #9bdbf2;
-  color: #9bdbf2;
+  border-color: #e0c216;
+  color: #030303;
 }
 
 .title {
@@ -737,14 +741,18 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 
 header.header {
   padding: 10px;
-  border-bottom: 1px solid #D8D8D8;
+  border-bottom: 2px solid #ac9b9b;
   background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 5;
-  height: 62px;
+  height: 65px;
+  background-image: url("きらきら.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 header.header div.header__bar.row {
@@ -862,7 +870,7 @@ div.contents.row div.content_post {
   margin: 20px 0;
   padding: 10px;
   position: relative;
-  height: 380px;
+  height: 350px;
   color: #fff;
   background-size: cover;
   background-position: center center;
@@ -870,24 +878,7 @@ div.contents.row div.content_post {
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
 }
 
-div.contents.row div.content_post:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FFA60000');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjYyJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC44NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(62%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.85)));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
-  z-index: 1;
-  border-radius: 3px;
-}
+
 
 
 
@@ -959,12 +950,14 @@ div.contents.row div.content_post span.name {
 
 div.contents.row div.content_post span.name a {
   display: block;
-  color: #aaa;
+  color: rgb(3, 3, 3);
+  font-weight: bolder;
 }
 
 div.contents.row div.content_post span.name a:hover {
   text-decoration: underline;
-  color: #aaa;
+  color: rgb(214, 15, 15);
+  transition: 0ms;
 }
 
 div.contents.row div.content_post span.name span {
@@ -996,7 +989,7 @@ form textarea {
 }
 
 form input[type="submit"] {
-  background-color: #57C3E9;
+  background-color: #4c66f8;
   border-radius: 20px;
   color: #fff;
   border: 0;
@@ -1004,7 +997,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: #e03caa;
 }
 
 .container {
@@ -1130,8 +1123,14 @@ footer p {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  position: absolute;
   align-items: center;
   padding: 5vh 0;
+  height: 100%;
+  background-image: url("きらきら.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 .item-box {
@@ -1142,6 +1141,11 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  background-image: url("きらきら.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 .item-box>.name {
@@ -1154,8 +1158,9 @@ footer p {
   height: 50vh;
   width: 60vw;
   min-height: 435px;
-  background-color: rgb(205, 202, 202);
+  background-color: white;
   object-fit: contain;
+  
 }
 
 .detail-table {
@@ -1169,35 +1174,64 @@ footer p {
   border: 1px solid #dedede;
   font-size: 14px;
   text-align: center;
+  padding: 10px;
 }
 
 .detail-value {
   width: 80%;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid #dedede;
   font-size: 14px;
+  text-align: center;
+}
+
+
+.calendar-btn {
+  text-align: center;
+  background-color: #57C3E9;
+  font-size: 24px;
+  color: rgb(15, 15, 15);
+  padding: 1vh 13vw;
+  margin: 0 0 20px 0;
 }
 
 .item-red-btn {
   text-align: center;
-  background-color: #ea352d;
+  background-color: #57C3E9;
   font-size: 24px;
-  font-weight: bold;
-  color: #FFF;
-  margin: 20px 0px;
-  padding: 2vh 10vw;
+  color: rgb(15, 15, 15);
+  margin: 20px ;
+  padding: 1vh 5vw;
 }
 
 .or-text {
   font-size: 20px;
 }
 
-.item-destroy {
-  background-color: lightgray;
+
+.calendar-destroy {
+  background-color: rgb(133, 124, 124);
   text-align: center;
   font-size: 24px;
   color: black;
   margin: 20px 0px;
-  padding: 2vh 10vw;
+  padding: 0vh 1vw;
 }
 
+.item-destroy {
+  background-color: rgb(133, 124, 124);
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px 30px ;
+  padding: 1vh 7vw;
+}
+
+.cmt-design {
+  font-weight: 900;
+}
+
+.name-col {
+  color: #eb4196;
+  font-weight: 700;
+}

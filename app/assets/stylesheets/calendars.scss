@@ -1,46 +1,12 @@
 // Place all the styles related to the calendars controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body {
+
+
+.calendar-body {
   background-color: rgb(114, 151, 161);
 }
 
-.calendar {
-  width: 100vw;
-  margin-top: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.item {
-  margin: 0.5vw;
-  border: medium solid rgb(0, 0, 0);
-  width: 12vw;
-  height: auto;
-  background-color: rgb(246, 253, 255);
-}
-
-.date {
-  height: 5vh;
-  display: flex;
-  font-size: 3vh;
-  align-items: center;
-  justify-content: center;
-  border-bottom: medium solid rgb(0, 0, 0);
-}
-
-.content {
-  min-height: 25vh;
-  padding: 5px;
-  white-space: nowrap;
-  overflow: scroll;
-}
-
-.plan-list {
-  margin: 1vh 0;
-}
 
 .form {
   display: flex;
@@ -64,4 +30,9 @@ body {
   height: 4vh;
   width: 13vw;
   margin: 0 2vw;
+}
+
+.submit-button {
+  width: 10vw;
+  margin: 1px;
 }

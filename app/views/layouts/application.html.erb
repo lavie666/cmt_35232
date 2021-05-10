@@ -6,15 +6,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link rel="stylesheet" href=".css" type="text/css">
     <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
   <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">CMT</a></h1>
+        <span class="cmt-design">
+          <h1 class="grid-6"><a href="/">CMT</a></h1>
+        </span>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
+          <div class="name-col">
             <span><%= current_user.name %>
             <ul class="user__info">
               <li>
@@ -24,6 +28,7 @@
               </li>
             </ul>
           </span>
+          </div>
           </div>
         <% else %>
           <div class="grid-6">
@@ -35,9 +40,9 @@
     </header>
     <%= yield %>
     <footer>
-      <p>
-        Copyright CMT 2021.
-      </p>
-    </footer>
+  <p>
+    Copyright CMT 2021.
+  </p>
+</footer>
   </body>
 </html>
