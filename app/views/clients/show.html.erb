@@ -51,7 +51,12 @@
       <% @calendar.each do |c| %>
         <tr>
           <th class="detail-item"><%= c.date %></th>
-          <td class="detail-value"><%= c.plan %><%= link_to "削除", client_calendar_path(c.id), method: :delete, data: { confirm: '削除しますか？' }, class:"calendar-destroy" %></td>
+
+          <td class="detail-value"><%= c.plan %>
+            <div class="calendar-destroy-right">
+              <%= link_to "削除", client_calendar_path(c.id), method: :delete, data: { confirm: '削除しますか？' }, class:"calendar-destroy" %>
+            </div>
+          </td>
         </tr>
       <% end %>
   </div>
