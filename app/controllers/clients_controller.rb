@@ -36,7 +36,7 @@ class ClientsController < ApplicationController
   end
 
   def show
-    @calendar = Calendar.all
+    @calendar = @client.calendars
     redirect_to root_path if current_user.id != @client.user.id
   end
 

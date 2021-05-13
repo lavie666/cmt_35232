@@ -15,7 +15,7 @@ class CalendarsController < ApplicationController
   end
 
   def show
-    @calendar = Calendar.new
+    @calendar = Calendar.find(params[:client_id])
   end
 
   def destroy

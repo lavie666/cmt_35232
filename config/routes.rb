@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    
     resources :calendars, only: [:index, :create, :show, :destroy]
   end
     resources :users, only: :show
