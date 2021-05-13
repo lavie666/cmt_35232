@@ -1194,6 +1194,7 @@ footer p {
   color: rgb(15, 15, 15);
   padding: 1vh 13vw;
   margin: 0 0 20px 0;
+  border-radius: 25px;
 }
 
 .item-red-btn {
@@ -1203,6 +1204,7 @@ footer p {
   color: rgb(15, 15, 15);
   margin: 20px ;
   padding: 1vh 5vw;
+  border-radius: 25px;
 }
 
 .or-text {
@@ -1233,6 +1235,7 @@ footer p {
   color: black;
   margin: 20px 0px 30px ;
   padding: 1vh 7vw;
+  border-radius: 25px;
 }
 
 .cmt-design {
