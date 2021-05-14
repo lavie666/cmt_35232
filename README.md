@@ -58,7 +58,7 @@ email:hamada@com
 
 ### Association
 - has_many :clients
-
+- has_many :calendars
 ----------
 ### clientsテーブル
 
@@ -91,4 +91,5 @@ email:hamada@com
 
 ### Association
 - belong_to :client
+- belong_to :user
 
